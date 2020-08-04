@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import TestReducer from "./TestReducer/TestReducer";
 import { Button } from "@material-ui/core";
 
-// You can remove all the state components, button and click events on state is starting to be built
+// You can remove all the state components, button and click events once state is starting to be built
 function App(props) {
   const handleClick = () => {
     props.testReducer();
