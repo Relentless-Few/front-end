@@ -13,3 +13,5 @@ Prettier- Code formatter
 ESLint
 
 Material-UI has been setup (in case we use this method).  There is a materialui folder that contains the theme- theme/theme.js that sets the primary and secondary colors.  There is a styles/styles.js were you can create CSS styles so that the components are not polluted with CSS-in-JS.  You can create as many files for styles as you want.
+
+Redux state is setup with Redux Dev Tools, get the extension for Chrome and it will show you detailed analysis of state in the browser.  Well worth it!
