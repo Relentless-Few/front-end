@@ -1,12 +1,7 @@
 import firebase from "../firebase";
 import { provider } from "../firebase";
 
-export const TEST_REDUCER = "TEST_REDUCER";
 export const USER_LOGON = "USER_LOGON";
-
-export const testReducer = () => dispatch => {
-  dispatch({ type: TEST_REDUCER, payload: "Inside reducer.js: TEST_REDUCER" });
-};
 
 export const userLogon = props => dispatch => {
   firebase

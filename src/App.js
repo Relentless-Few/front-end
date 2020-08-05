@@ -1,6 +1,4 @@
 import React from "react";
-import { testReducer } from "./actions/actions";
-import { connect } from "react-redux";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { ThemeProvider } from "@material-ui/styles";
 import Header from "./Header/Header";
@@ -24,6 +22,4 @@ function App(props) {
   );
 }
 
-const mapStateToProps = state => ({});
-
-export default connect(mapStateToProps, { testReducer })(App);
+export default App;

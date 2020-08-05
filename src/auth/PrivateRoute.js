@@ -14,7 +14,7 @@ const PrivateRoute = ({
           if (localStorage.getItem("token")) {
             return <Component />;
           } else {
-            return <Redirect to="/dashboard" />;
+            return <Redirect to="/" />;
           }
         }}
       />
