@@ -23,12 +23,11 @@ export const panelStyles = makeStyles(theme => ({
     color: "white"
   },
   chatMenu: {
+    marginTop: "5px",
     float: "right",
     width: "250px",
     height: "100vh",
     backgroundColor: "lightgrey",
-    // display: "flex",
-    // justifyContent: "center",
   },
   accordionType: {
     height: "60vh"
