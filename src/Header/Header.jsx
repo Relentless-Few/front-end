@@ -23,6 +23,13 @@ const Header = props => {
   return (
     <AppBar position="static" className={classes.menuBar}>
       <Toolbar className={classes.toolBar}>
+      <Button
+          variant="contained"
+          onClick={() => props.history.push('/posts')}
+          className={classes.standardButton}
+        >
+          Posts
+        </Button>
         <Button
           variant="contained"
           onClick={() => props.history.push('/createorg')}
