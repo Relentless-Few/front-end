@@ -6,18 +6,16 @@ import { Toolbar } from "@material-ui/core";
 import { sharedStyles } from "../materialui/styles/styles";
 import { connect } from "react-redux";
 import { userLogon } from "../actions/actions";
-//import { useQuery } from "@apollo/react-hooks";
-//import { QUERY_USERS } from "../queries/userQueries";
+import { useQuery } from "@apollo/react-hooks";
+import { USER_ORGS } from "../queries/userQueries";
+import axios from "axios";
 
 const Header = props => {
-  //const { loading, error, data } = useQuery(QUERY_USERS);
+  //const { loading, error, data } = useQuery(USER_ORGS);
   const classes = sharedStyles();
 
   const onSubmit = () => {
-    //   if (!loading) {
-    //     console.log(data);
-    props.userLogon(props);
-    //   }
+    props.userLogon();
   };
 
   return (
