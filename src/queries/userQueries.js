@@ -8,7 +8,7 @@ export const QUERY_USERS = gql`
   }
 `;
 
-export let USER_ORGS = (queryString, max) => `
+export let GET_USER_ORGS = (queryString, max) => `
   {
     viewer {
       organizations(${queryString}:${max}) {
