@@ -6,7 +6,10 @@ const NotificationPanel = props => {
 
   return (
     <div className={classes.notificationMenu}>
-      This is the Notification Panel
+      <div className={classes.icon} />
+      <div className={classes.icon} />
+      <div className={classes.icon} />
+      <div className={classes.icon} />
     </div>
   )
 }
