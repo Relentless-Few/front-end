@@ -13,6 +13,22 @@ export const userLogon = props => dispatch => {
       const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
+      const token = "d20bf1cd291b4378c607e6f1bf63b8fe158b864a";
+      axios
+        .post(
+          "https://api.github.com/graphql",
+          {
+            query: USER_ORGS("first", 15)
+          },
+          {
+            headers: {
+              Authorization: `bearer ${token}`
+            }
+          }
+        )
+        .then(res => {
+          console.log(res.data);
+        });
       dispatch({ type: USER_LOGON, payload: user });
 
       localStorage.setItem("token", token);
