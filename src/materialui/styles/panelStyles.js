@@ -5,12 +5,22 @@ export const panelStyles = makeStyles(theme => ({
     height: "100vh",
   },
   notificationMenu: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
     float: "left",
     width: "150px",
     height: "100vh",
     backgroundColor: "grey",
-    display: "flex",
-    justifyContent: "center",
+  },
+  badge: {
+    position: "relative",
+    top: "-110px",
+    right: "-40px",
+    padding: "5px 10px",
+    borderRadius: "50%",
+    background: "red",
+    color: "white"
   },
   chatMenu: {
     float: "right",
@@ -26,5 +36,12 @@ export const panelStyles = makeStyles(theme => ({
   heading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
+  },
+  icon: {
+    background: theme.palette.primary.main,
+    width: "80px",
+    height: "80px",
+    borderRadius: "20px",
+    margin: "20px 0"
   },
 }));
