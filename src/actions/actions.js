@@ -16,7 +16,7 @@ export const ADD_ORGANIZATIONS = "ADD_ORGANIZATIONS";
 export const userLogon = props => dispatch => {
   let user = "";
   let token = "";
-  const pat = "10179169c213c8d51f0fc17e9f5f9b1df50ad073"; // Personal access token.  Don't leave yours in here when you commit while testing.
+  const pat = ""; // Personal access token.  Don't leave yours in here when you commit while testing.
   let id = "";
   console.log("inside userLogon");
   firebase
