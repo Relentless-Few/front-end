@@ -7,3 +7,15 @@ export const QUERY_USERS = gql`
     }
   }
 `;
+
+export let GET_USER_ORGS = (queryString, max) => `
+  {
+    viewer {
+      organizations(${queryString}:${max}) {
+        nodes {
+          name
+        }
+      }
+    }
+  }
+`;
