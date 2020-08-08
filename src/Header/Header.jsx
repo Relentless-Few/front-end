@@ -25,10 +25,45 @@ const Header = props => {
       <Toolbar className={classes.toolBar}>
         <Button
           variant="contained"
+          onClick={() => props.history.push('/createorg')}
+          className={classes.standardButton}
+        >
+          Create Organization
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => props.history.push('/joinorg')}
+          className={classes.standardButton}
+        >
+          Join Organization
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => props.history.push('/createteam')}
+          className={classes.standardButton}
+        >
+          Create Team
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => props.history.push('/jointeam')}
+          className={classes.standardButton}
+        >
+          Join Team
+        </Button>
+        <Button
+          variant="contained"
           onClick={onSubmit}
           className={classes.standardButton}
         >
           Login
+        </Button>
+        <Button
+          variant="contained"
+          onClick={() => localStorage.removeItem("token")}
+          className={classes.standardButton}
+        >
+          Logout
         </Button>
       </Toolbar>
     </AppBar>
