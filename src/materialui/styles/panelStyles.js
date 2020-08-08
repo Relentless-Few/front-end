@@ -13,6 +13,15 @@ export const panelStyles = makeStyles(theme => ({
     height: "100vh",
     backgroundColor: "grey",
   },
+  badge: {
+    position: "relative",
+    top: "-110px",
+    right: "-40px",
+    padding: "5px 10px",
+    borderRadius: "50%",
+    background: "red",
+    color: "white"
+  },
   chatMenu: {
     float: "right",
     width: "250px",
