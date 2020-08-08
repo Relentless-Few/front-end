@@ -7,8 +7,9 @@ import Home from "./Home/Home";
 import Dashboard from "./Dashboard/Dashboard";
 import PrivateRoute from "./auth/PrivateRoute";
 
-// You can remove all the state components, button and click events once state is starting to be built
 function App(props) {
+  console.log("API: ", process.env.REACT_APP_BASE_API_URL);
+  console.log("WS: ", process.env.REACT_APP_BASE_WS_URL);
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
