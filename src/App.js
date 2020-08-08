@@ -6,6 +6,7 @@ import theme from "./materialui/theme/theme";
 import Home from "./Home/Home";
 import Dashboard from "./Dashboard/Dashboard";
 import PrivateRoute from "./auth/PrivateRoute";
+import PostContainer from './components/PostContainer';
 
 function App(props) {
   console.log("API: ", process.env.REACT_APP_BASE_API_URL);
@@ -17,6 +18,7 @@ function App(props) {
         <Switch>
           <Route exact path="/" component={Home} />
           <PrivateRoute path="/dashboard" component={Dashboard} />
+          <Route path="/post" component={PostContainer} />
         </Switch>
       </BrowserRouter>
     </ThemeProvider>
