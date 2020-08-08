@@ -77,40 +77,43 @@ export const userLogon = props => dispatch => {
   //   });
 };
 
-// Check to see if the user has a record and a pat
-// axios
-// .get(
-//   "localhost:4000",
-//   {
-//     query: GET_USER_BY_UID_SERVER({ uid: user.uid })
-//   },
-//   {
-//     headers: {
-//       Authorization: `bearer ${pat}`
-//     }
-//   }
-// )
-// .then(res => {
-//   console.log(res.data);
-//   axios
-//     .post(
-//       "https://api.github.com/graphql",
-//       {
-//         query: GET_USER_ORGS_CLIENT("first", 25)
-//       },
-//       {
-//         headers: {
-//           Authorization: `bearer ${pat}`
-//         }
-//       }
-//     )
-//     .then(res => {
-//       console.log(res.data);
+// export const createPost = props => dispatch => {
+//   firebase
+//     .auth()
+//     .signInWithPopup(provider)
+//     .then(function(result) {
+//       // This gives you a GitHub Access Token. You can use it to access the GitHub API.
+//       const token = result.credential.accessToken;
+//       // The signed-in user info.
+//       const user = result.user;
+//       const pat = ""; // Personal access token.  Don't leave yours in here when you commit while testing.
+//       axios
+//         .post(
+//           "https://api.github.com/graphql",
+//           {
+//             query: GET_USER_ORGS("first", 25)
+//           },
+//           {
+//             headers: {
+//               Authorization: `bearer ${pat}`
+//             }
+//           }
+//         )
+//         .then(res => {
+//           console.log(res.data);
+//         });
+//       dispatch({ type: USER_LOGON, payload: user });
+
+//       localStorage.setItem("token", token);
+//       props.history.push("/dashboard");
+//     })
+//     .catch(function(error) {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       const email = error.email;
+//       const credential = error.credential;
+//       console.log(
+//         `Error Code: ${errorCode} ${errorMessage} ${email} ${credential}`
+//       );
 //     });
-//   dispatch({ type: USER_LOGON, payload: user });
-
-//   localStorage.setItem("token", token);
-//   props.history.push("/dashboard");
-// });
-
-const getUid = user => {};
+// };
