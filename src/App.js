@@ -13,6 +13,8 @@ import JoinOrgForm from "./components/forms/JoinOrgForm";
 import JoinTeamForm from "./components/forms/JoinTeamForm";
 import PostForm from "./components/forms/PostForm";
 import CommentForm from "./components/forms/CommentForm";
+import NotificationPanel from "./components/NotificationPanel";
+import ChatPanel from "./components/ChatPanel";
 
 function App(props) {
   console.log("API: ", process.env.REACT_APP_BASE_API_URL);
@@ -21,6 +23,7 @@ function App(props) {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Header />
+        <NotificationPanel />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/posts" component={PostContainer} />
@@ -32,6 +35,7 @@ function App(props) {
           <Route path="/createcomment" component={CommentForm} />
           <PrivateRoute path="/dashboard" component={Dashboard} />
         </Switch>
+        <ChatPanel />
       </BrowserRouter>
     </ThemeProvider>
   );

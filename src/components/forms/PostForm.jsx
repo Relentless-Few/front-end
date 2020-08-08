@@ -19,7 +19,8 @@ const PostForm = props => {
 
   const onSubmit = () => {
     // Need to code createPost in actions
-    props.createPost();
+    // props.createPost();
+    console.log(post)
   };
 
   const handleChange = e => {
@@ -60,4 +61,4 @@ const PostForm = props => {
 };
 const mapStateToProps = state => ({});
 
-export default withRouter(connect(mapStateToProps, { createPost })(PostForm));
+export default withRouter(connect(mapStateToProps, { })(PostForm));
