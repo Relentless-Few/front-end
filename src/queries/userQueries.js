@@ -14,6 +14,7 @@ export let GET_USER_ORGS_CLIENT = (queryString, max) => `
       organizations(${queryString}:${max}) {
         nodes {
           name
+          login
         }
       }
     }

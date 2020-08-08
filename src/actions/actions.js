@@ -10,7 +10,8 @@ import { execute, makePromise } from "apollo-link";
 export const USER_LOGON = "USER_LOGON";
 export const SET_USER_ID = "SET_USER_ID";
 export const IS_NEW_USER = "IS_NEW_USER";
-export const HAS_NO_ORGANIZATIONS = "HAS_NO_ORGANIZATIONS";
+export const HAS_ORGANIZATIONS = "HAS_NO_ORGANIZATIONS";
+export const ADD_ORGANIZATIONS = "ADD_ORGANIZATIONS";
 
 export const userLogon = props => dispatch => {
   let user = "";
@@ -34,7 +35,8 @@ export const userLogon = props => dispatch => {
       makePromise(execute(link, operation))
         .then(res => {
           if (!res.data.userOne._id) {
-            dispatch({ type: IS_NEW_USER, true });
+            dispatch({ type: IS_NEW_USER, payload: true });
+          } else {
             axios
               .post(
                 "https://api.github.com/graphql",
@@ -48,10 +50,24 @@ export const userLogon = props => dispatch => {
                 }
               )
               .then(res => {
-                console.log(res.data);
+                console.log(res.data.data.viewer.organizations.nodes);
+                console.log(
+                  "nodes value: ",
+                  res.data.data.viewer.organizations.nodes.length
+                );
+                if (res.data.data.viewer.organizations.nodes.length === 0) {
+                  console.log(res.data);
+                  dispatch({ type: HAS_ORGANIZATIONS, payload: false });
+                } else {
+                  dispatch({ type: HAS_ORGANIZATIONS, payload: true });
+                  dispatch({
+                    type: ADD_ORGANIZATIONS,
+                    payload: res.data.data.viewer.organizations.nodes
+                  });
+                }
               });
+            user._id = res.data.userOne._id;
           }
-          user._id = res.data.userOne._id;
         })
         .catch(error => console.log("ERROR: Getting uid: ", error));
 
