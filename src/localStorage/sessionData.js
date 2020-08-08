@@ -1,5 +1,6 @@
 export const saveToLocalStorage = state => {
   try {
+    console.log("SessionData.js: ", state);
     const serializedState = JSON.stringify(state);
     localStorage.setItem("state", serializedState);
   } catch (err) {

@@ -23,7 +23,7 @@ const httpLink = new HttpLink({
 });
 
 const wsLink = new WebSocketLink({
-  uri: `${process.env.REACT_APP_BASE_WS_URL}`,
+  uri: `${process.env.REACT_APP_BASE_WS_URL}/graphql`,
   options: {
     reconnect: true
   }

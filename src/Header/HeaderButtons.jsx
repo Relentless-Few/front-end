@@ -53,15 +53,7 @@ const HeaderButtons = props => {
           Join Team
         </Button>
       )}
-      {!localStorage.getItem("token") && (
-        <Button
-          variant="contained"
-          onClick={props.onLogon}
-          className={classes.standardButton}
-        >
-          Login
-        </Button>
-      )}
+
       {props.isLoggedIn && (
         <Button
           variant="contained"

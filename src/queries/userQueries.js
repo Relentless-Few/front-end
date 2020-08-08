@@ -20,14 +20,11 @@ export let GET_USER_ORGS_CLIENT = (queryString, max) => `
   }
 `;
 
-export const GET_USER_BY_UID_SERVER = filterObj => {
-  const query = gql`
+// export const GET_USER_BY_UID_SERVER = filterObj => {
+export let GET_USER_BY_UID_SERVER = (key, value) => gql`
 {
-    userOne(filter: {${filterObj}} ) {
-        _id
+    userOne(filter: {${key}:"${value}"}) {
+      _id
     }
   }
 `;
-
-  return query;
-};
