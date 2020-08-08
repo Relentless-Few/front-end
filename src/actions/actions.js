@@ -1,5 +1,6 @@
 import firebase from "../firebase";
 import { provider } from "../firebase";
+import { useQuery } from "@apollo/react-hooks";
 
 export const USER_LOGON = "USER_LOGON";
 
@@ -13,6 +14,7 @@ export const userLogon = props => dispatch => {
       // The signed-in user info.
       const user = result.user;
       dispatch({ type: USER_LOGON, payload: user });
+
       localStorage.setItem("token", token);
       props.history.push("/dashboard");
     })
