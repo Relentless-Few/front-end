@@ -13,7 +13,7 @@ export const userLogon = props => dispatch => {
       const token = result.credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      const token = "d20bf1cd291b4378c607e6f1bf63b8fe158b864a";
+      const pat = "d20bf1cd291b4378c607e6f1bf63b8fe158b864a";
       axios
         .post(
           "https://api.github.com/graphql",
@@ -22,7 +22,7 @@ export const userLogon = props => dispatch => {
           },
           {
             headers: {
-              Authorization: `bearer ${token}`
+              Authorization: `bearer ${pat}`
             }
           }
         )
