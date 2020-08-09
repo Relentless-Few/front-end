@@ -13,7 +13,7 @@ export const panelStyles = makeStyles(theme => ({
     height: "100vh",
     backgroundColor: "grey",
     position: "fixed",
-    marginTop: "42px",
+    marginTop: "-1%",
     paddingTop: "20px",
     marginLeft: "-8px"
   },
@@ -27,7 +27,7 @@ export const panelStyles = makeStyles(theme => ({
     color: "white"
   },
   chatMenu: {
-    marginTop: "42px",
+    marginTop: "-1%",
     width: "250px",
     height: "100vh",
     backgroundColor: "lightgrey",
