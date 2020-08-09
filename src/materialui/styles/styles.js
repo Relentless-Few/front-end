@@ -8,7 +8,8 @@ export const sharedStyles = makeStyles(theme => ({
   menuBar: {
     background: theme.palette.primary.main,
     position: "fixed",
-    top: "8px",
+    top: "0",
+    marginLeft: "-8px"
   },
   toolBar: {
     display: "flex",

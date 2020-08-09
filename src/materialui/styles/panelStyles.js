@@ -13,8 +13,9 @@ export const panelStyles = makeStyles(theme => ({
     height: "100vh",
     backgroundColor: "grey",
     position: "fixed",
-    marginTop: "50px",
-    paddingTop: "20px"
+    marginTop: "42px",
+    paddingTop: "20px",
+    marginLeft: "-8px"
   },
   badge: {
     position: "relative",
@@ -26,7 +27,7 @@ export const panelStyles = makeStyles(theme => ({
     color: "white"
   },
   chatMenu: {
-    marginTop: "50px",
+    marginTop: "42px",
     width: "250px",
     height: "100vh",
     backgroundColor: "lightgrey",
