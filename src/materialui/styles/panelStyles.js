@@ -12,6 +12,9 @@ export const panelStyles = makeStyles(theme => ({
     width: "150px",
     height: "100vh",
     backgroundColor: "grey",
+    position: "fixed",
+    marginTop: "50px",
+    paddingTop: "20px"
   },
   badge: {
     position: "relative",
@@ -23,11 +26,12 @@ export const panelStyles = makeStyles(theme => ({
     color: "white"
   },
   chatMenu: {
-    marginTop: "5px",
-    float: "right",
+    marginTop: "50px",
     width: "250px",
     height: "100vh",
     backgroundColor: "lightgrey",
+    position: "fixed",
+    left: "84%"
   },
   accordionType: {
     height: "60vh"

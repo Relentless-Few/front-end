@@ -24,6 +24,7 @@ function App(props) {
       <BrowserRouter>
         <Header />
         <NotificationPanel />
+        <ChatPanel />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/posts" component={PostContainer} />
@@ -35,7 +36,7 @@ function App(props) {
           <Route path="/createcomment" component={CommentForm} />
           <PrivateRoute path="/dashboard" component={Dashboard} />
         </Switch>
-        <ChatPanel />
+        {/* <ChatPanel /> */}
       </BrowserRouter>
     </ThemeProvider>
   );

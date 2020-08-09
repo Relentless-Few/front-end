@@ -4,6 +4,7 @@ import { QUERY_USERS } from "../queries/userQueries";
 import CommentContainer from "./CommentContainer";
 import Button from "@material-ui/core/Button";
 import { sharedStyles } from "../materialui/styles/styles";
+import computerImg from "../images/computer.jpeg";
 
 const PostContainer = props => {
   const { loading, error, data } = useQuery(QUERY_USERS);
@@ -26,7 +27,8 @@ const PostContainer = props => {
   }, [data])
 
   return (
-    <div>
+    <div className={classes.mainWindow}>
+      <div className={classes.posts}>
       <Button
         variant="contained"
         onClick={() => props.history.push("/createpost")}
@@ -34,9 +36,10 @@ const PostContainer = props => {
       >
         Create Post
       </Button>
-      <div style={{ width: "450px", padding: "10px", marginTop: "20px", borderRadius: "10px", backgroundColor: "lightgray"}}>
+      {/* <div className={classes.posts}> */}
         <h3>Tiffany Simionescu</h3>
         {/* <p>{!loading ? data : ''}</p> */}
+        <img src={computerImg} alt="computer" className={classes.image} />
         <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
           sed do eiusmod tempor incididunt ut labore et dolore magna 
           aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
